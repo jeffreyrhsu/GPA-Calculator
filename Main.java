@@ -5,12 +5,15 @@ class Main {
 
     System.out.println("GPA Calculator");
     System.out.println("Enter number of courses: ");
-    int numCo = reader.nextInt();
+    int numCourses = reader.nextInt();
     double totalPoints = 0;
     double totalCredits = 0;
-    for(int i = 0; i < numCo; i++){
+    //String course = "";
+    for(int i = 0; i < numCourses; i++){
+      System.out.println();
       System.out.println("Enter course name: ");
       String course = reader.nextLine();
+      reader.nextLine();
       System.out.println("Enter credits: ");
       double credits = reader.nextDouble();
       totalCredits += credits;
@@ -21,7 +24,7 @@ class Main {
 
     }
     double gpa = totalPoints/totalCredits;
-    System.out.println("GPA: " + gpa);
+    System.out.println("\nGPA: " + gpa);
 
   }
 }
